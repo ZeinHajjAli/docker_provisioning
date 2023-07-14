@@ -23,4 +23,4 @@ WORKDIR /app
 # Expose port 8888 for Jupyter Notebook
 EXPOSE 8888
 
-CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--port", "8888", "--allow-root", "--NotebookApp.token='CHANGEME'", "--notebook-dir='/app'"]
+CMD ["jupyter", "notebook", "--no-browser", "--ip", "0.0.0.0", "--port", "8888", "--allow-root", "--NotebookApp.token='CHANGEME'", "--notebook-dir='/app'"]
