@@ -1,1 +1,5 @@
-docker exec -it docker_prov bash
+param (
+	[string]$ContainerName = "docker_prov"
+)
+
+docker exec -it $ContainerName bash
