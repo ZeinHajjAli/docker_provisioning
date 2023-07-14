@@ -1,5 +1,5 @@
 param (
-	[string]$ImageName = "docker_prov",
+	[string]$ImageName = "docker_prov:latest",
 	[string]$ContainerName = "docker_prov"
 )
 

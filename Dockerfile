@@ -6,7 +6,8 @@ RUN apt-get update
 # Install system dependencies
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends \
-	build-essential
+	build-essential \
+	nano
 
 # Install required Python packages
 COPY requirements.txt .

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ImageName=${1:-"docker_prov"}
+ImageName=${1:-"docker_prov:latest"}
 ContainerName=${2:-"docker_prov"}
 
 docker stop $ContainerName > /dev/null 2>&1
