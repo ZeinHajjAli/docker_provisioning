@@ -18,8 +18,6 @@ It's based on the [TensorFlow Docker image](https://hub.docker.com/r/tensorflow/
     ```bash
     docker build -t jupyter-custom:latest .
     ```
-
-	Where 'IMAGE_NAME' is the tag you want to give to the image.
 	
 3. Bring up the container with docker compose:
     ```bash
