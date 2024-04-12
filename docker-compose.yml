@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+    tensorflow:
+        image: jupyter-custom:latest
+        volumes:
+            - ./data:/tf/data # Maps ./data on your host to /tf/data in the container
+            - ./notebooks:/tf/notebooks # Maps ./notebooks on your host to /tf/notebooks in the container
+        # ports:
+        # - "8888:8888" # Maps port 8888 on the host to port 8888 on the container
+        environment:
+            - NVIDIA_VISIBLE_DEVICES=all # Ensures all GPUs are visible inside the container
+            - NVIDIA_DRIVER_CAPABILITIES=compute,utility # Required to enable NVIDIA driver capabilities
+        # restart: unless-stopped

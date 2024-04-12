@@ -15,40 +15,14 @@ It's based on the [TensorFlow Docker image](https://hub.docker.com/r/tensorflow/
 
 1. Clone this repo
 2. Build the image:
-	- Linux:
-		```bash
-		./docker_build.sh IMAGE_NAME
-		```
-
-	- Windows:
-		```powershell
-		./docker_build.ps1 -ImageName IMAGE_NAME
-		```
+    ```bash
+    docker build -t jupyter-custom:latest .
+    ```
 
 	Where 'IMAGE_NAME' is the tag you want to give to the image.
 	
-3. Run the container:
-	- Linux:
-		```bash
-		./docker_run.sh IMAGE_NAME CONTAINER_NAME
-		```
+3. Bring up the container with docker compose:
+    ```bash
+    docker compose up --build -d
+    ```
 
-	- Windows:
-		```powershell
-		./docker_build.ps1 -ImageName IMAGE_NAME -ContainerName CONTAINER_NAME
-		```
-
-	Where 'IMAGE_NAME' name of the built image and 'CONTAINER_NAME' is the name you want to give to the container.
-
-4. To access an interactive terminal in the container:
-	- Linux:
-		```bash
-		./docker_terminal.sh CONTAINER_NAME
-		```
-
-	- Windows:
-		```powershell
-		./docker_terminal.ps1 -ContainerName CONTAINER_NAME
-		```
-
-	Where 'CONTAINER_NAME' is the name of the container.

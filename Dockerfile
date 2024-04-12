@@ -21,6 +21,9 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 WORKDIR /app
 
 # Expose port 8888 for Jupyter Notebook
-EXPOSE 8888
+# I'm using the Jupyter Notebook environment in VSCode so I just connect to the python runtime in the container instead of running the notebook
+# EXPOSE 8888
 
-CMD ["jupyter", "notebook", "--no-browser", "--ip", "0.0.0.0", "--port", "8888", "--allow-root", "--NotebookApp.token='CHANGEME'", "--notebook-dir='/app'"]
+# CMD ["jupyter", "notebook", "--no-browser", "--ip", "0.0.0.0", "--port", "8888", "--allow-root", "--NotebookApp.token='CHANGEME'", "--notebook-dir='/app'"]
+
+CMD ["sleep", "infinity"]
